@@ -7,6 +7,21 @@
     <title>Hex Code Generator App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/3f43e11179.js" crossorigin="anonymous"></script>
+    <style>
+
+      .animate-spin{
+        animation: spin 1s linear infinite;
+
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+      }
+    </style>
 </head>
 <body>
     <div class="container text-center mx-auto flex justify-center items-center h-screen">
@@ -18,11 +33,14 @@
       <hr>
       <div id="buttons">
         
-        <button id="new-color" class="hover:bg-gray-600 hover:text-white bg-gray-200 text-black border rounded-lg p-2 m-2 ring  focus:ring-offset-2 focus:ring-offset-orange-500">
-          <i class="fas fa-spinner"></i>
-          New Color
+        <button id="new-color" class="inline-flex items-center font-semibold leading-6 text-sm shadow rounded-md transition ease-in-out duration-150 hover:bg-gray-600 hover:text-white bg-gray-200 text-black border rounded-lg p-2 m-2 ring  focus:ring-offset-2 focus:ring-offset-orange-500">
+          <!-- <i class="fas fa-spinner"></i> -->
+          <svg class="animate-spin -ml-1 mr-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          New Color ...
         </button>
-        
       </div>
     </div>
   </div>
